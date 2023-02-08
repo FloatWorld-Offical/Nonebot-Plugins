@@ -20,8 +20,8 @@ async def status():
             text = json.loads(f.read())
             servername = text["server"]
             address = text["address"]
-            result = text["header"]
-            footer = text["footer"]
+            result = text["message"]["header"]
+            footer = text["message"]["footer"]
             for i in range(len(address)):
                 if text["BedrockMODE"] == False:
                     server = mcstatus.JavaServer.lookup(address[i])
@@ -29,7 +29,8 @@ async def status():
                     server = mcstatus.BedrockServer.lookup(address[i])
                 try:
                     server_status = server.status()
-                    result += "[{}]\n状态: 正常\n人数: {}\n".format(servername[i], server_status.players.online)
+                    middletext = str(text["message"]["body"])
+                    result += middletext.replace("<server_name>", servername[i]).replace("<server_status>", "正常").replace("<server_online>", str(server_status.players.online))
                 except:
                     result += "[{}]\n状态: 维护中\n".format(servername[i])
             result += footer

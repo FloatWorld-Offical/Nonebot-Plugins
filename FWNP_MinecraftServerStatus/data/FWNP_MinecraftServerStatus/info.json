@@ -4,8 +4,11 @@
     "*****"
   ],
   "address": [
-    "*********"
+    "*********:*****"
   ],
-  "header": "【服务器状态】\n",
-  "footer": "\n@Floatworld 2023"
+  "message": {
+    "header": "【服务器状态】\n",
+    "body": "[<server_name>]\n状态: <server_status>\n人数: <server_online>\n",
+    "footer": "\n@Floatworld 2023"
+  }
 }

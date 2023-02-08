@@ -1,7 +1,7 @@
 # FWNP_MinecraftServerStatus
 ![Status](https://img.shields.io/badge/Build-Success-brightgreen)
 ![Status](https://img.shields.io/badge/Status-ContinuousUpdate-brightgreen)
-![Status](https://img.shields.io/badge/Version-v0.1-blue)
+![Status](https://img.shields.io/badge/Version-v0.2-blue)
 ![Status](https://img.shields.io/badge/Team-FloatWorld-blue)
 ![Status](https://img.shields.io/badge/Author-皇橙籽-blue)
 ![Status](https://img.shields.io/badge/Language-Python-blue)
@@ -25,10 +25,18 @@
 - address(List)
   - 列表中每一项使用字符串进行存储，代表该位置的服务器地址
   - 注意！服务器名称与服务器地址的顺序需相同
-- header(String)
-  - 返回的消息的头部
-- footer(String)
-  - 返回的消息的尾部
+  - 注意！服务器地址需为IP+端口，其他形式可能会出错
+- message(Dict)
+  - header(String)
+    - 返回的消息的头部
+  - body(String)
+    - 返回消息的增量部分(即展示服务器信息的部分)
+    - 在文字中需要保留以下三个替换符
+      - <server_name> 服务器名称
+      - <server_status> 服务器状态
+      - <server_online> 服务器在线人数
+  - footer(String)
+    - 返回的消息的尾部
 #### command.json
 - status(String)
   - 该命令用于触发服务器状态获取操作
