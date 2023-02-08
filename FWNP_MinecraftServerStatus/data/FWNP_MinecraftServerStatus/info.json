@@ -1,0 +1,11 @@
+{
+  "BedrockMODE": false,
+  "server": [
+    "*****"
+  ],
+  "address": [
+    "*********"
+  ],
+  "header": "【服务器状态】\n",
+  "footer": "\n@Floatworld 2023"
+}
