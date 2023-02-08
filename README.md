@@ -13,7 +13,7 @@
 绿色: 未有可用版本 正在开发  
 黄色: 将会开发 正在规划中  
 红色: 停止更新
-- ![Status](https://img.shields.io/badge/Info-v0.1-brightgreen) 服务器信息查询(Minecraft)
+- ![Status](https://img.shields.io/badge/Info-v0.2-brightgreen) 服务器信息查询(Minecraft)
 - ![Status](https://img.shields.io/badge/Info-正在开发-green) 玩家信息绑定(QQ&Player)
 - ![Status](https://img.shields.io/badge/Info-等待开发-yellow) FloatWorld机器人管理程序
 - ![Status](https://img.shields.io/badge/Info-等待开发-yellow) 账户及经济系统
