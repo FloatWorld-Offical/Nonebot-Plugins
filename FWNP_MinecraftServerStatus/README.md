@@ -29,10 +29,12 @@
     - 返回的消息的头部
   - body(String)
     - 返回消息的增量部分(即展示服务器信息的部分)
-    - 在文字中需要保留以下三个替换符
+    - 在文字中输入以下标签以获取数据
       - <server_name> 服务器名称
       - <server_status> 服务器状态
       - <server_online> 服务器在线人数
+      - <server_delay> 服务器延迟
+      - <server_motd> 服务器MOTD(仅Java)
   - footer(String)
     - 返回的消息的尾部
 #### command.json
