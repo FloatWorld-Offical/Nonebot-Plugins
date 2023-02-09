@@ -1,7 +1,7 @@
 # FWNP_MinecraftServerStatus
 ![Status](https://img.shields.io/badge/Build-Success-brightgreen)
 ![Status](https://img.shields.io/badge/Status-ContinuousUpdate-brightgreen)
-![Status](https://img.shields.io/badge/Version-v0.2-blue)
+![Status](https://img.shields.io/badge/Version-v0.3-blue)
 ![Status](https://img.shields.io/badge/Team-FloatWorld-blue)
 ![Status](https://img.shields.io/badge/Author-皇橙籽-blue)
 ![Status](https://img.shields.io/badge/Language-Python-blue)
@@ -17,13 +17,11 @@
 
 ### data文件说明
 #### info.json
-- BedrockMODE(Boolean)
-  - True: 基岩版模式
-  - False: Java版模式 / 默认
 - server(List)
   - 列表中每一项用字符串进行存储，代表该位置的服务器名称
 - address(List)
   - 列表中每一项使用字符串进行存储，代表该位置的服务器地址
+  - 在地址前加上[B],则将会以基岩版协议进行检测（Java版无需增加前缀）
   - 注意！服务器名称与服务器地址的顺序需相同
   - 注意！服务器地址需为IP+端口，其他形式可能会出错
 - message(Dict)
