@@ -1,0 +1,10 @@
+{
+  "Example": {
+    "Command": "test",
+    "Answer": "1"
+  },
+  "Example2": {
+    "Command": "test2",
+    "Answer": "2"
+  }
+}
