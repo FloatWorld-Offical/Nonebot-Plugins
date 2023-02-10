@@ -11,5 +11,6 @@
     "header": "【服务器状态】\n",
     "body": "[<server_name>]\n状态: <server_status>\n人数: <server_online>\n",
     "footer": "\n@Floatworld 2023"
-  }
+  },
+  "help": "【服务器帮助】\n状态查询: <help_status>\n单服查询(JE): <help_statusJE>\n单服查询(BE): <help_statusBE>\n\n@Floatworld 2023"
 }

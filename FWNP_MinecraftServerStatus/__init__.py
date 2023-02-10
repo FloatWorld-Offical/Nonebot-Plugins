@@ -33,6 +33,19 @@ def textinstead(middletext, server_status, name, Bedrock):
         middletext = safe_replace(middletext, tags[z], values[z])
     return middletext
 
+if commands["help"]["enable"]:
+    Phelp_matcher = nonebot.on_command(commands["help"]["command"])
+    @Phelp_matcher.handle()
+    async def Phelp():
+        with open("data/FWNP_MinecraftServerStatus/info.json", "r+", encoding="utf-8") as f:
+            text = json.loads(f.read())
+            tags = ["<help_status>", "<help_statusJE>", "<help_statusBE>"]
+            values = [commands["list"]["command"], commands["single_JE"]["command"], commands["single_BE"]["command"]]
+            middletext = text["help"]
+            for z in range(len(tags)):
+                middletext = safe_replace(middletext, tags[z], values[z])
+            await Phelp_matcher.send(middletext)
+
 if commands["list"]["enable"]:
     list_matcher = nonebot.on_command(commands["list"]["command"])
     @list_matcher.handle()
@@ -64,9 +77,9 @@ if commands["list"]["enable"]:
                 await list_matcher.send("[Error]\n执行失败\n请联系机器人所有者检查配置文件\n如无结果,请联系插件作者")
                 
 if commands["single_JE"]["enable"]:
-    single_matcher = nonebot.on_command(commands["single_JE"]["command"])
-    @single_matcher.handle()
-    async def single(key: Message = CommandArg()):
+    singleJE_matcher = nonebot.on_command(commands["single_JE"]["command"])
+    @singleJE_matcher.handle()
+    async def singleJE(key: Message = CommandArg()):
         with open("data/FWNP_MinecraftServerStatus/info.json", "r+", encoding="utf-8") as f:
             try:
                 text = json.loads(f.read())
@@ -82,14 +95,14 @@ if commands["single_JE"]["enable"]:
                 except:
                     result += "状态: 维护中\n".format()
                 result += footer
-                await list_matcher.send(result)
+                await singleJE_matcher.send(result)
             except:
-                await list_matcher.send("[Error]\n无法正常获取数据\n一般是地址错误(不支持无端口)\n如无结果,请联系插件作者")
+                await singleJE_matcher.send("[Error]\n无法正常获取数据\n一般是地址错误(不支持无端口)\n如无结果,请联系插件作者")
 
 if commands["single_BE"]["enable"]:
-    single_matcher = nonebot.on_command(commands["single_BE"]["command"])
-    @single_matcher.handle()
-    async def single(key: Message = CommandArg()):
+    singleBE_matcher = nonebot.on_command(commands["single_BE"]["command"])
+    @singleBE_matcher.handle()
+    async def singleBE(key: Message = CommandArg()):
         with open("data/FWNP_MinecraftServerStatus/info.json", "r+", encoding="utf-8") as f:
             try:
                 text = json.loads(f.read())
@@ -105,6 +118,6 @@ if commands["single_BE"]["enable"]:
                 except:
                     result += "状态: 维护中\n".format()
                 result += footer
-                await list_matcher.send(result)
+                await singleBE_matcher.send(result)
             except:
-                await list_matcher.send("[Error]\n无法正常获取数据\n一般是地址错误(不支持无端口)\n如无结果,请联系插件作者")
+                await singleBE_matcher.send("[Error]\n无法正常获取数据\n一般是地址错误(不支持无端口)\n如无结果,请联系插件作者")

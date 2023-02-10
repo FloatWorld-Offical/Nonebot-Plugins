@@ -1,7 +1,7 @@
 # FWNP_MinecraftServerStatus
 ![Status](https://img.shields.io/badge/Build-Success-brightgreen)
 ![Status](https://img.shields.io/badge/Status-ContinuousUpdate-brightgreen)
-![Status](https://img.shields.io/badge/Version-v0.4-blue)
+![Status](https://img.shields.io/badge/Version-v0.5-blue)
 ![Status](https://img.shields.io/badge/Team-FloatWorld-blue)
 ![Status](https://img.shields.io/badge/Author-皇橙籽-blue)
 ![Status](https://img.shields.io/badge/Language-Python-blue)
@@ -34,7 +34,7 @@
     - 返回的消息的头部
   - body(String)
     - 返回消息的增量部分(即展示服务器信息的部分)
-    - 在文字中输入以下标签以获取数据
+    - 在文字中插入以下标签以获取数据
       - <server_name> 服务器名称
       - <server_status> 服务器状态
       - <server_online> 服务器在线人数
@@ -42,7 +42,18 @@
       - <server_motd> 服务器MOTD(仅Java)
   - footer(String)
     - 返回的消息的尾部
+- help(String)
+  - 插件帮助的自定义消息
+  - 在文字中插入以下标签自动获取命令
+    - <help_status> 批量获取的命令
+    - <help_statusJE> 单服IP查询(JE)
+    - <help_statusBE> 单服IP查询(BE)
 #### command.json
+- help(dict) --- 插件帮助
+  - enable(Boolean)
+    - 用于开启/关闭该模块
+  - command(String)
+    - 用于获取插件帮助的命令
 - list(dict) --- 批量获取服务器状态
   - enable(Boolean)
     - 用于开启/关闭该模块

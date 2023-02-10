@@ -13,7 +13,7 @@
 绿色: 未有可用版本 正在开发  
 黄色: 将会开发 正在规划中  
 红色: 停止更新
-- ![Status](https://img.shields.io/badge/Info-v0.4-brightgreen) 服务器信息查询 / Minecraft JE and BE
+- ![Status](https://img.shields.io/badge/Info-v0.5-brightgreen) 服务器信息查询 / Minecraft JE and BE
 - ![Status](https://img.shields.io/badge/Info-v0.1-brightgreen) 基础问答响应 / NoCode
 - ![Status](https://img.shields.io/badge/Info-正在开发-green) 玩家信息绑定 / Bind Player From Minecraft And QQ
 - ![Status](https://img.shields.io/badge/Info-等待开发-yellow) 账户系统 / Create New System to manage info

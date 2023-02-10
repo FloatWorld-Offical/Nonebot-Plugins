@@ -1,1 +1,18 @@
-{"list": {"enable": true, "command": "status"}, "single_JE": {"enable": true, "command": "statusJE"}, "single_BE": {"enable": true, "command": "statusBE"}}
+{
+  "help": {
+    "enable": true,
+    "command": "status help"
+  },
+  "list": {
+    "enable": true,
+    "command": "status"
+  },
+  "single_JE": {
+    "enable": true,
+    "command": "statusJE"
+  },
+  "single_BE": {
+    "enable": true,
+    "command": "statusBE"
+  }
+}
