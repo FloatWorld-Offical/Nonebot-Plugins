@@ -1,7 +1,7 @@
 # FWNP_MinecraftServerStatus
 ![Status](https://img.shields.io/badge/Build-Success-brightgreen)
 ![Status](https://img.shields.io/badge/Status-ContinuousUpdate-brightgreen)
-![Status](https://img.shields.io/badge/Version-v0.3-blue)
+![Status](https://img.shields.io/badge/Version-v0.4-blue)
 ![Status](https://img.shields.io/badge/Team-FloatWorld-blue)
 ![Status](https://img.shields.io/badge/Author-皇橙籽-blue)
 ![Status](https://img.shields.io/badge/Language-Python-blue)
@@ -14,6 +14,11 @@
 1. 打开info.json修改参数(参数信息详见下方文件说明)
 2. 打开command.json修改触发命令(参数信息详见下方文件说明)
 3. 重启机器人
+
+### 后续更新安排
+- 增加更多数据标签
+- 分离单服查询的结构设置
+- ......
 
 ### data文件说明
 #### info.json
@@ -38,5 +43,18 @@
   - footer(String)
     - 返回的消息的尾部
 #### command.json
-- status(String)
-  - 该命令用于触发服务器状态获取操作
+- list(dict) --- 批量获取服务器状态
+  - enable(Boolean)
+    - 用于开启/关闭该模块
+  - command(String)
+    - 用于设置批量获取服务器状态的命令
+- single_JE(dict) --- 获取单个服务器状态(BE)
+  - enable(Boolean)
+    - 用于开启/关闭该模块
+  - command(String)
+    - 用于设置获取单个服务器状态的命令
+- single_BE(dict) --- 获取单个服务器状态(JE)
+  - enable(Boolean)
+    - 用于开启/关闭该模块
+  - command(String)
+    - 用于设置获取单个服务器状态的命令
