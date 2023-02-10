@@ -1,5 +1,6 @@
 # NonebotPlugins By FloatWorld
 
+## 在保证兼容性的前提下,Release仅会保留最新版本
 ### 插件运行环境
 - Nonebot2 
   - 版本：v2.0.0-rc3 (其余版本未经测试，不代表完全不可用)
